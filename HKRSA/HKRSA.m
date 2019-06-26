@@ -85,6 +85,14 @@ static NSData *base64_decode(NSString *str){
     return SK;
 }
 
+- (void)setPublicKey:(SecKeyRef)publicKey{
+    PK = publicKey;
+}
+- (void)setPrivateKey:(SecKeyRef)privateKey{
+    SK = privateKey;
+}
+
+
 - (NSString *)encryptString:(NSString *)rawString {
     NSData *data = [rawString dataUsingEncoding:NSUTF8StringEncoding];
     NSData *encryptedData = [self encryptData:data];

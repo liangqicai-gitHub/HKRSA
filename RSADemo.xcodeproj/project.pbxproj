@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0471D22522C355C500DAC7F4 /* SecKeyToolForString.m in Sources */ = {isa = PBXBuildFile; fileRef = 0471D22422C355C500DAC7F4 /* SecKeyToolForString.m */; };
 		AD6A0C951C85C744004C0F03 /* HKRSA.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6A0C941C85C744004C0F03 /* HKRSA.m */; };
 		AD80787C1C1A8E010026773D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD80787B1C1A8E010026773D /* main.m */; };
 		AD80787F1C1A8E010026773D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD80787E1C1A8E010026773D /* AppDelegate.m */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0471D22322C355C500DAC7F4 /* SecKeyToolForString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecKeyToolForString.h; sourceTree = "<group>"; };
+		0471D22422C355C500DAC7F4 /* SecKeyToolForString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecKeyToolForString.m; sourceTree = "<group>"; };
 		AD6A0C931C85C744004C0F03 /* HKRSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKRSA.h; sourceTree = "<group>"; };
 		AD6A0C941C85C744004C0F03 /* HKRSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HKRSA.m; sourceTree = "<group>"; };
 		AD8078771C1A8E010026773D /* RSADemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSADemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +57,8 @@
 			children = (
 				AD6A0C931C85C744004C0F03 /* HKRSA.h */,
 				AD6A0C941C85C744004C0F03 /* HKRSA.m */,
+				0471D22322C355C500DAC7F4 /* SecKeyToolForString.h */,
+				0471D22422C355C500DAC7F4 /* SecKeyToolForString.m */,
 			);
 			path = HKRSA;
 			sourceTree = "<group>";
@@ -141,6 +146,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -177,6 +183,7 @@
 				AD8078821C1A8E010026773D /* ViewController.m in Sources */,
 				AD80787F1C1A8E010026773D /* AppDelegate.m in Sources */,
 				AD80787C1C1A8E010026773D /* main.m in Sources */,
+				0471D22522C355C500DAC7F4 /* SecKeyToolForString.m in Sources */,
 				AD6A0C951C85C744004C0F03 /* HKRSA.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

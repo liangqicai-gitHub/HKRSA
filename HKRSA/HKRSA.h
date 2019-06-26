@@ -32,6 +32,9 @@ typedef NS_ENUM(NSInteger, HKAbstractType){
 - (void)loadPKFromData:(NSData *)PKData;
 - (void)loadSKFromData:(NSData *)SKData password:(NSString *)password;
 
+- (void)setPublicKey:(SecKeyRef)publicKey;
+- (void)setPrivateKey:(SecKeyRef)privateKey;
+
 - (NSString *)encryptString:(NSString *)rawString;
 - (NSString *)decryptString:(NSString *)encryptedString;
 
