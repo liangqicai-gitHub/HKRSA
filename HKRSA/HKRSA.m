@@ -156,11 +156,25 @@ static NSData *base64_decode(NSString *str){
     return base64_encode_data(vData);
 }
 
+- (NSString *)signData:(NSData *)data withAbstractType:(HKAbstractType)type {
+    NSData *tempData = [HKRSA abstractOfData:data withType:type];
+    NSData *vData = [self signData:tempData withPadding:[HKRSA secPaddingWithType:type]];
+    return base64_encode_data(vData);
+}
+
+
 - (BOOL)verifyString:(NSString *)rawString withSignature:(NSString *)signature  withAbstractType:(HKAbstractType)type {
     NSData *vData = base64_decode(signature);
     NSData *rawData = [rawString dataUsingEncoding:NSUTF8StringEncoding];
     return [self verifyData:[HKRSA abstractOfData:rawData withType:type] withSignature:vData withPadding:[HKRSA secPaddingWithType:type]];
 }
+
+- (BOOL)verifyBase64DecodeString:(NSString *)base64DecodeString withSignature:(NSString *)signature  withAbstractType:(HKAbstractType)type {
+    NSData *vData = base64_decode(signature);
+    NSData *rawData = base64_decode(base64DecodeString);
+    return [self verifyData:[HKRSA abstractOfData:rawData withType:type] withSignature:vData withPadding:[HKRSA secPaddingWithType:type]];
+}
+
 
 - (NSData *)signData:(NSData *)rawData withPadding:(SecPadding)padding{
     size_t hashSize = SecKeyGetBlockSize([self getSK]);

@@ -22,6 +22,8 @@ typedef NS_ENUM(NSInteger, HKAbstractType){
     HKAbstractType_SHA512
 };
 
+
+
 @interface HKRSA : NSObject
 
 + (instancetype)sharedInstance;
@@ -36,10 +38,15 @@ typedef NS_ENUM(NSInteger, HKAbstractType){
 - (void)setPrivateKey:(SecKeyRef)privateKey;
 
 - (NSString *)encryptString:(NSString *)rawString;
+- (NSData *)encryptData:(NSData *)data;
 - (NSString *)decryptString:(NSString *)encryptedString;
+- (NSData *)decryptData:(NSData *)data;
 
 - (NSString *)signString:(NSString *)rawString withAbstractType:(HKAbstractType)type;
+- (NSString *)signData:(NSData *)data withAbstractType:(HKAbstractType)type;
+
 - (BOOL)verifyString:(NSString *)rawString withSignature:(NSString *)signature  withAbstractType:(HKAbstractType)type;
+- (BOOL)verifyBase64DecodeString:(NSString *)base64DecodeString withSignature:(NSString *)signature  withAbstractType:(HKAbstractType)type;
 
 //后续添加NSData的加密、解密、签名、签名验证等操作
 @end
