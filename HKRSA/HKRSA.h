@@ -38,9 +38,7 @@ typedef NS_ENUM(NSInteger, HKAbstractType){
 - (void)setPrivateKey:(SecKeyRef)privateKey;
 
 - (NSString *)encryptString:(NSString *)rawString;
-- (NSData *)encryptData:(NSData *)data;
 - (NSString *)decryptString:(NSString *)encryptedString;
-- (NSData *)decryptData:(NSData *)data;
 
 - (NSString *)signString:(NSString *)rawString withAbstractType:(HKAbstractType)type;
 - (NSString *)signData:(NSData *)data withAbstractType:(HKAbstractType)type;
