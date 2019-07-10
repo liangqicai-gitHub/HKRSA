@@ -201,7 +201,7 @@ static NSData *base64_decode(NSString *str){
     }
     
     free(outbuf);
-    CFRelease(keyRef);
+//    CFRelease(keyRef);
     return ret;
 }
 
